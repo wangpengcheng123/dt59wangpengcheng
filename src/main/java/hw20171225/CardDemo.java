@@ -20,19 +20,29 @@ import java.util.Scanner;
  * @see
  */
 public class CardDemo {
+    static String str1 = "至尊级";
 
-    static String[] arr = new String[] { "至尊级", "钻石级", "铂金级", "黄金级", "白银级" };
+    static String str2 = "钻石级";
 
-    public static int moneyTest(String[] arr, Double money, String string) {
+    static String str3 = "铂金级";
+
+    static String str4 = "黄金级";
+
+    static String str5 = "白银级";
+
+    static String[] arr = new String[] { str1, str2, str3, str4, str5 };
+
+    public double moneyTest(String[] arr, double money, String string) {
+
         double index = 0.75;
-        double sum = 0;
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals(string)) {
-                sum = sum + money * index;
+                money = money * index;
             }
             index = index + 0.05;
         }
-        return (int) sum;
+        return money;
 
     }
 
@@ -47,8 +57,8 @@ public class CardDemo {
         System.out.println("请输入会员等级");
         String str1 = scanner.next();
         System.out.println("请输入购物金额：");
-        Double money = scanner.nextDouble();
-        System.out.println("该次购物所花的钱数是：" + moneyTest(arr, money, str1) + "元");
+        int money = scanner.nextInt();
+        System.out.println("该次购物所花的钱数是：" + new CardDemo().moneyTest(arr, money, str1) + "元");
         scanner.close();
 
     }

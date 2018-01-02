@@ -34,7 +34,7 @@ public class LimousineDemo1 extends CarDemo1 {
     @Override
     public void summary() {
 
-        System.out.println("我是豪车" + getBrand() + "，我的车身的演的是" + getColor() + "，我的车牌好是" + sedanNumber + "，我的车身空间不是很大，只能允许"
+        System.out.println("我是豪车" + getBrand() + "，我的车身的颜色是" + getColor() + "，我的车牌好是" + sedanNumber + "，我的车身空间不是很大，只能允许"
                 + personNumber + "人乘坐");
 
     }
